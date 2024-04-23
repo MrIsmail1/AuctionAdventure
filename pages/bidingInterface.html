@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auction Interface</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: transparent;
+        margin: 0;
+        padding: 20px;
+      }
+      .auction-item {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .auction-item img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      .auction-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .auction-details p {
+        margin: 0;
+      }
+      .auction-form {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .auction-form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .auction-form input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+      .auction-form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .auction-form input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="auction-item">
+      <img src="product-image.jpg" alt="Product Image" />
+      <div class="auction-details">
+        <p class="product-name">Product: Lorem Ipsum</p>
+        <p class="starting-price">Starting Price: $100</p>
+      </div>
+      <div class="auction-details">
+        <p class="current-price">Current Price: $120</p>
+        <p class="time-left">Time Left: 1 day</p>
+      </div>
+    </div>
+    <div class="auction-form">
+      <form method="post">
+        <label for="bid">Your Bid:</label>
+        <input
+          type="text"
+          id="bid"
+          name="bid"
+          placeholder="Enter your bid amount"
+        />
+        <input type="submit" value="Place Bid" />
+      </form>
+    </div>
+  </body>
+</html>
