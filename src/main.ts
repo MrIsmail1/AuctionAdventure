@@ -11,6 +11,33 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
+    let noteWebsite: any;
+
+    WA.room.onEnterLayer("furniture/sign").subscribe(async () => {
+        console.log("Entering visibleNote layer");
+
+        noteWebsite = await WA.ui.website.open({
+            url: "./note.html",
+            position: {
+                vertical: "top",
+                horizontal: "middle",
+            },
+            size: {
+                height: "30vh",
+                width: "50vw",
+            },
+            margin: {
+                top: "10vh",
+            },
+            allowApi: true,
+        });
+
+    });
+
+    WA.room.onLeaveLayer("furniture/sign").subscribe(async () => {
+        await noteWebsite.close();
+    });
+
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
