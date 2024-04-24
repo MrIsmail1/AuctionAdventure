@@ -464,15 +464,63 @@
                 }, 
                 {
                  "height":0,
-                 "id":20,
-                 "name":"Pancart",
+                 "id":21,
+                 "name":"productId",
                  "point":true,
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
                  "width":0,
-                 "x":369.364922671932,
-                 "y":496.873971701217
+                 "x":395.448079658606,
+                 "y":497.866287339972
+                }, 
+                {
+                 "height":0,
+                 "id":22,
+                 "name":"productName",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":431.009957325747,
+                 "y":497.866287339972
+                }, 
+                {
+                 "height":0,
+                 "id":23,
+                 "name":"productPrice",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":467.994310099573,
+                 "y":496.443812233286
+                }, 
+                {
+                 "height":0,
+                 "id":24,
+                 "name":"productImage",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":503.556187766714,
+                 "y":495.0213371266
+                }, 
+                {
+                 "height":0,
+                 "id":25,
+                 "name":"productNewPrice",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":529.160739687056,
+                 "y":487.908961593172
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -589,7 +637,7 @@
          "y":0
         }],
  "nextlayerid":67,
- "nextobjectid":21,
+ "nextobjectid":26,
  "orientation":"orthogonal",
  "properties":[
         {
