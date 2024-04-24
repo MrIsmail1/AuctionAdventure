@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://play.workadventu.re/iframe_api.js"></script>
+        <script type="module" src="../src/func/sign"></script>
+        <style>
+            body {
+                background-color: white;
+            }
+            body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+#editSection {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+textarea {
+    width: calc(100% - 40px); /* 100% width minus padding */
+    height: 150px;
+    margin-bottom: 10px;
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    overflow-y: auto;
+    outline: none; /* Supprimer le contour par défaut */
+}
+
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#displayText {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+
+            pre {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="editSection">
+            <div>
+                <textarea id="noteTextArea"></textarea>
+            </div>
+            <div>
+                <button id="saveButton">Save</button>
+            </div>
+        </div>
+        <pre id="displayText"></pre>
+    </body>
+</html>

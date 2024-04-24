@@ -1,4 +1,5 @@
 /// <reference types="@workadventure/iframe-api-typings" />
+import { signInterface } from "./loader/signInterface";
 import { bidingInterface } from "./loader/bidingInterface";
 import leaderboard from "./loader/leaderboard";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
@@ -11,6 +12,7 @@ WA.onInit()
     console.log("Scripting API ready");
     bidingInterface();
     leaderboard();
+    signInterface();
   })
   .catch((e) => console.error(e));
 
