@@ -1,0 +1,94 @@
+{
+  "vehicles": [
+    {
+      "name": "Toyota Corolla",
+      "year": 2018,
+      "mileage": 50000,
+      "image": "https://placeholder.com/toyota-corolla"
+    },
+    {
+      "name": "Ford Mustang",
+      "year": 2017,
+      "mileage": 30000,
+      "image": "https://placeholder.com/ford-mustang"
+    },
+    {
+      "name": "Honda Civic",
+      "year": 2019,
+      "mileage": 25000,
+      "image": "https://placeholder.com/honda-civic"
+    },
+    {
+      "name": "Chevrolet Impala",
+      "year": 2016,
+      "mileage": 45000,
+      "image": "https://placeholder.com/chevrolet-impala"
+    },
+    {
+      "name": "Tesla Model S",
+      "year": 2020,
+      "mileage": 15000,
+      "image": "https://placeholder.com/tesla-model-s"
+    },
+    {
+      "name": "BMW 3 Series",
+      "year": 2015,
+      "mileage": 60000,
+      "image": "https://placeholder.com/bmw-3-series"
+    },
+    {
+      "name": "Audi A4",
+      "year": 2014,
+      "mileage": 70000,
+      "image": "https://placeholder.com/audi-a4"
+    },
+    {
+      "name": "Mercedes-Benz C-Class",
+      "year": 2021,
+      "mileage": 10000,
+      "image": "https://placeholder.com/mercedes-benz-c-class"
+    },
+    {
+      "name": "Volkswagen Golf",
+      "year": 2013,
+      "mileage": 80000,
+      "image": "https://placeholder.com/volkswagen-golf"
+    },
+    {
+      "name": "Subaru Outback",
+      "year": 2012,
+      "mileage": 90000,
+      "image": "https://placeholder.com/subaru-outback"
+    },
+    {
+      "name": "Ford F-150",
+      "year": 2011,
+      "mileage": 120000,
+      "image": "https://placeholder.com/ford-f150"
+    },
+    {
+      "name": "Jeep Wrangler",
+      "year": 2022,
+      "mileage": 5000,
+      "image": "https://placeholder.com/jeep-wrangler"
+    },
+    {
+      "name": "Nissan Altima",
+      "year": 2010,
+      "mileage": 100000,
+      "image": "https://placeholder.com/nissan-altima"
+    },
+    {
+      "name": "Hyundai Sonata",
+      "year": 2019,
+      "mileage": 30000,
+      "image": "https://placeholder.com/hyundai-sonata"
+    },
+    {
+      "name": "Lexus RX",
+      "year": 2020,
+      "mileage": 20000,
+      "image": "https://placeholder.com/lexus-rx"
+    }
+  ]
+}
