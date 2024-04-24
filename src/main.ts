@@ -1,6 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bidingInterface } from "./loader/bidingInterface";
-
+import leaderboard from "./loader/leaderboard";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log("Script started successfully");
@@ -10,6 +10,7 @@ WA.onInit()
   .then(() => {
     console.log("Scripting API ready");
     bidingInterface();
+    leaderboard();
   })
   .catch((e) => console.error(e));
 
