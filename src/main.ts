@@ -3,8 +3,8 @@ import { bidingInterface } from "./loader/bidingInterface";
 import leaderboard from "./loader/leaderboard";
 import { masterInterface } from "./loader/masterInterface";
 import { signInterface } from "./loader/signInterface";
-import { voteInterface } from "./loader/voteInterface";
 import { tutorialInterface } from "./loader/tutorialInterface";
+import { voteInterface } from "./loader/voteInterface";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { officeBuyInterface } from "./loader/officeBuyInterface";
@@ -16,13 +16,17 @@ console.log("Script started successfully");
 WA.onInit()
   .then(() => {
     console.log("Scripting API ready");
-    /* bidingInterface(); */
+    if (WA.room.hashParameters.master === "true") {
+      WA.player.setOutlineColor(255, 0, 0);
+      masterInterface();
+      officeBuyInterface();
+    } else {
+      bidingInterface();
+      tutorialInterface();
+    }
     leaderboard();
     signInterface();
     ticketOfficeInterface();
-    voteInterface();
-    officeBuyInterface();
-    tutorialInterface();
   })
   .catch((e) => console.error(e));
 

@@ -1,15 +1,27 @@
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  image: string[];
-}
-
 // Function to update WA.state with new bid and new price
 const updateBid = (newBid: number) => {
   if (newBid > WA.state.productPrice) {
     WA.state.productNewPrice = newBid;
+    WA.players.configureTracking();
+    const players = WA.players.list();
+    for (const play of players) {
+      play.outlineColor;
+    }
+    let author: string = WA.player.name;
+    WA.chat.sendChatMessage(
+      author + " a émis une nouvelle enchère à " + newBid + "$",
+      { scope: "local", author: WA.player.state.master ?? "System" }
+    );
+    const duration = 3000;
+    WA.player.setOutlineColor(255, 255, 0);
+    setTimeout(() => {
+      WA.player.setOutlineColor(0, 0, 0);
+    }, duration);
   } else {
+    WA.chat.sendChatMessage("Une offre plus élevée existe déjà.", {
+      scope: "local",
+      author: WA.player.state.master ?? "System",
+    });
     console.log("Bid must be higher than the current price.");
   }
 };
@@ -21,35 +33,6 @@ WA.state.onVariableChange("productNewPrice").subscribe((newPrice) => {
 // Wait for the API to be ready
 WA.onInit()
   .then(async () => {
-    console.log("Scripting API ready");
-
-    const fetchProductDetails = async (): Promise<Product | null> => {
-      try {
-        const response = await fetch("https://dummyjson.com/products");
-        if (!response.ok) {
-          throw new Error("Failed to fetch product details");
-        }
-        const data = await response.json();
-        const product = data.products[0];
-        return {
-          id: product.id,
-          title: product.title,
-          price: product.price,
-          image: product.images[0],
-        };
-      } catch (error) {
-        console.error("Error fetching product details:", error);
-        return null;
-      }
-    };
-
-    const product = await fetchProductDetails();
-    if (product) {
-      WA.state.productId = product.id;
-      WA.state.productName = product.title;
-      WA.state.productPrice = product.price;
-      WA.state.productImage = product.image;
-    }
     fillProductDetails();
   })
   .catch((e) => console.error(e));
@@ -58,13 +41,15 @@ WA.onInit()
 const fillProductDetails = () => {
   const auctionProduct = document.querySelector(".auction-product");
   if (
+    WA.state.productInAuction &&
     auctionProduct &&
     WA.state.productId &&
     WA.state.productName &&
     WA.state.productPrice &&
     WA.state.productImage
   ) {
-    const currentPrice = WA.state.productNewPrice || WA.state.productPrice;
+    const currentPrice =
+      parseFloat(WA.state.productNewPrice) || parseFloat(WA.state.productPrice);
     auctionProduct.innerHTML = `
       <div class="auction-item">
       <img src="${WA.state.productImage}" alt="Product Image" />
