@@ -2,8 +2,11 @@
 import { signInterface } from "./loader/signInterface";
 import { bidingInterface } from "./loader/bidingInterface";
 import leaderboard from "./loader/leaderboard";
+import { voteInterface } from "./loader/voteInterface";
+
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import ticketOfficeInterface from "./loader/ticketOfficeInterface";
+import { officeBuyInterface } from "./loader/officeBuyInterface";
 
 console.log("Script started successfully");
 
@@ -15,6 +18,8 @@ WA.onInit()
     leaderboard();
     signInterface();
     ticketOfficeInterface();
+    voteInterface();
+    officeBuyInterface();
   })
   .catch((e) => console.error(e));
 
