@@ -44,6 +44,8 @@ export default defineConfig({
       input: {
         index: "./index.html",
         // note: "./pages/bidingInterface.html",
+        leaderboard: "./pages/leaderboard.html",
+        ticketOfficeInterface: "./pages/ticketOfficeInterface.html",
         tuto: "./pages/tutorialInterface.html",
         ...getMapsScripts(maps),
       },

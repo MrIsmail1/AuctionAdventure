@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Buy</title>
+      <script src="https://play.workadventu.re/iframe_api.js"></script>
+        <script type="module" src="../src/func/officeBuy"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #officeBuy {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .auction-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.auction-item img {
+  width: 100px; /* Ajustez la taille de l'image selon vos besoins */
+  height: auto; /* Pour conserver le ratio */
+  margin-right: 10px;
+}
+
+.auction-details {
+  flex-grow: 1;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.starting-price, .current-price, .time-left {
+  margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <div id="officeBuy"></div>
+</body>
+</html>

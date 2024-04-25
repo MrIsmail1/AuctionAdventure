@@ -1,9 +1,13 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { signInterface } from "./loader/signInterface";
 import { bidingInterface } from "./loader/bidingInterface";
+import leaderboard from "./loader/leaderboard";
+import { voteInterface } from "./loader/voteInterface";
 import { tutorialInterface } from "./loader/tutorialInterface";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import ticketOfficeInterface from "./loader/ticketOfficeInterface";
+import { officeBuyInterface } from "./loader/officeBuyInterface";
 
 console.log("Script started successfully");
 
@@ -11,8 +15,12 @@ console.log("Script started successfully");
 WA.onInit()
   .then(() => {
     console.log("Scripting API ready");
-    bidingInterface();
+    /* bidingInterface(); */
+    leaderboard();
     signInterface();
+    ticketOfficeInterface();
+    voteInterface();
+    officeBuyInterface();
     tutorialInterface();
   })
   .catch((e) => console.error(e));

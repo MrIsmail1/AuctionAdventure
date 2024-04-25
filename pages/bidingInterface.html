@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <script type="module" src="/src/func/bidingController.ts"></script>
     <title>Auction Interface</title>
     <style>
       body {
@@ -64,19 +66,9 @@
   </head>
 
   <body>
-    <div class="auction-item">
-      <img src="product-image.jpg" alt="Product Image" />
-      <div class="auction-details">
-        <p class="product-name">Product: Lorem Ipsum</p>
-        <p class="starting-price">Starting Price: $100</p>
-      </div>
-      <div class="auction-details">
-        <p class="current-price">Current Price: $120</p>
-        <p class="time-left">Time Left: 1 day</p>
-      </div>
-    </div>
+    <div class="auction-product"></div>
     <div class="auction-form">
-      <form method="post">
+      <form method="post" id="bid-form">
         <label for="bid">Your Bid:</label>
         <input
           type="text"
@@ -84,7 +76,7 @@
           name="bid"
           placeholder="Enter your bid amount"
         />
-        <input type="submit" value="Place Bid" />
+        <input id="bidSubmit" type="submit" value="Place Bid" />
       </form>
     </div>
   </body>
