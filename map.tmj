@@ -619,9 +619,31 @@
          "width":31,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":73,
+         "name":"tutorialZone",
+         "objects":[
+                {
+                 "height":93.8461538461538,
+                 "id":33,
+                 "name":"tutorialZone",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":126.153846153846,
+                 "x":233.076923076923,
+                 "y":390
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":69,
- "nextobjectid":21,
+ "nextlayerid":75,
+ "nextobjectid":35,
  "orientation":"orthogonal",
  "properties":[
         {

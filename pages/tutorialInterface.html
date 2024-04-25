@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <title>WorkAdventure Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .tutorial-container {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 2rem;
+        }
+
+        .top-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .instructions-container p {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .tutorial-image {
+            width: 100%;
+        }
+
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tutorial-container">
+        <div class="top-content">
+            <h1 class="title">Welcome to the Auction Room! 👋</h1>
+            <img src="../map.png" alt="Tutorial Image" class="tutorial-image">
+            <div class="instructions-container"></div>
+        </div>
+        
+        <div class="bottom-nav">
+            <div class="navigation-buttons">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tutorialSteps = [
+                {
+                    title: "Welcome to the Auction House!",
+                    img: "../map.png",
+                    instructions: [
+                        "Explore how to navigate our platform and participate in live auctions.",
+                        "Welcome to the WorkAdventure adventurer ! I will be showing you how things work down here!"
+                    ]
+                },
+                {
+                    title: "Navigating the Auction House",
+                    img: "../conference.png",
+                    instructions: [
+                        "Use the arrow keys or click to move around.",
+                        "Approach items of interest to view details.",
+                        "Interact with auctioneers or items using the space bar or a mouse click."
+                    ]
+                },
+                {
+                    title: "Participating in an Auction",
+                    img: "../map.png",
+                    instructions: [
+                        "Click on an auction item to enter the bidding screen.",
+                        "You'll see the current highest bid and remaining time.",
+                        "Enter your bid in the designated field and submit it before the countdown ends."
+                    ]
+                },
+                {
+                    title: "Monitoring Your Bids and Auction Results",
+                    img: "../conference.png",
+                    instructions: [
+                        "Track your active and past bids through the 'My Bids' section.",
+                        "You'll receive notifications if you're outbid or win an auction.",
+                        "Check the auction results tab for details on items you've won and payment instructions."
+                    ]
+                },
+                {
+                    title: "Additional Features",
+                    img: "../map.png",
+                    instructions: [
+                        "Explore additional features such as setting maximum bid limits.",
+                        "Use the watchlist to keep track of interesting items.",
+                        "Adjust your account settings for optimal bidding and participation."
+                    ]
+                }
+            ];
+
+    
+            let currentStep = 0;
+    
+            function updateTutorialContent() {
+                const step = tutorialSteps[currentStep];
+                document.querySelector('.title').textContent = step.title;
+                document.querySelector('.tutorial-image').src = step.img;
+                const instructionsContainer = document.querySelector('.instructions-container');
+                instructionsContainer.innerHTML = '';
+    
+                // Append each instruction as a paragraph
+                step.instructions.forEach(instruction => {
+                    const p = document.createElement('p');
+                    p.textContent = instruction;
+                    instructionsContainer.appendChild(p);
+                });
+            }
+    
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                if (currentStep < tutorialSteps.length - 1) {
+                    currentStep++;
+                    updateTutorialContent();
+                }
+            });
+    
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    updateTutorialContent();
+                }
+            });
+    
+            // Initialize the tutorial with the first step
+            updateTutorialContent();
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>
+
+

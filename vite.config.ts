@@ -43,7 +43,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: "./index.html",
-        note: "./pages/bidingInterface.html",
+        // note: "./pages/bidingInterface.html",
+        tuto: "./pages/tutorialInterface.html",
         ...getMapsScripts(maps),
       },
     },
