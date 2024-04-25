@@ -1094,7 +1094,42 @@
          "draworder":"topdown",
          "id":38,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":50.3778337531485,
+                 "id":3,
+                 "name":"tutorialZone",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.84550797649,
+                 "x":769.661349006437,
+                 "y":1225.86062132662
+                }, 
+                {
+                 "height":0,
+                 "id":4,
+                 "name":"productList",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":754.268122026308,
+                 "y":945.284075006997
+                }, 
+                {
+                 "height":0,
+                 "id":5,
+                 "name":"lastProductId",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":753.568429890848,
+                 "y":959.977609851665
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1374,13 +1409,13 @@
          "y":0
         }],
  "nextlayerid":39,
- "nextobjectid":1,
+ "nextobjectid":6,
  "orientation":"orthogonal",
  "properties":[
         {
          "name":"mapCopyright",
          "type":"string",
-         "value":"Credits: WorkAdventure (https://WorkAdventu.re) \nLicense: CC-BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)"
+         "value":"Credits: WorkAdventure (https:\/\/WorkAdventu.re) \nLicense: CC-BY-SA 3.0 (http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/)"
         }, 
         {
          "name":"mapDescription",
@@ -1400,7 +1435,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src/main.ts"
+         "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

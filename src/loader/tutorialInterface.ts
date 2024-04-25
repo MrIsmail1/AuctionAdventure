@@ -9,6 +9,9 @@ const tutorialInterfaceLoader = async () => {
         position: "right",
       });
     });
+    WA.room.area.onLeave("tutorialZone").subscribe(() => {
+      WA.ui.modal.closeModal();
+    });
   });
 };
 
