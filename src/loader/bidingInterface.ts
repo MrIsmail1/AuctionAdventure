@@ -8,8 +8,8 @@ const bidingInterfaceLoader = async () => {
       horizontal: "right",
     },
     size: {
-      height: "40vh",
-      width: "20vw",
+      height: "80vh",
+      width: "26vw",
     },
     margin: {
       top: "10vh",
