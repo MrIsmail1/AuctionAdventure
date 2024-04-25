@@ -5,6 +5,7 @@ import leaderboard from "./loader/leaderboard";
 import { voteInterface } from "./loader/voteInterface";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import { officeBuyInterface } from "./loader/officeBuyInterface";
 
 console.log("Script started successfully");
 
@@ -16,6 +17,7 @@ WA.onInit()
     leaderboard();
     signInterface();
     voteInterface();
+    officeBuyInterface();
   })
   .catch((e) => console.error(e));
 
