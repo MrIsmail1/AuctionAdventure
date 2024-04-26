@@ -2,25 +2,17 @@ const ticketOfficeInterface = async () => {
   let ticket: any;
 
   WA.room.onEnterLayer("Guichet").subscribe(async () => {
-    ticket = await WA.ui.website.open({
-      url: "../pages/ticketOfficeInterface.html",
-      position: {
-        vertical: "top",
-        horizontal: "middle",
-      },
-      size: {
-        height: "43vh",
-        width: "80vw",
-      },
-      margin: {
-        top: "10vh",
-      },
+    await WA.ui.modal.openModal({
+      title: "WorkAdventure Tutorial",
+      src: "http://localhost:5173/pages/ticketOfficeInterface.html",
+      allow: "fullscreen",
       allowApi: true,
+      position: "right",
     });
   });
 
   WA.room.onLeaveLayer("Guichet").subscribe(async () => {
-    await ticket.close();
+    await WA.ui.modal.closeModal();
   });
 };
 

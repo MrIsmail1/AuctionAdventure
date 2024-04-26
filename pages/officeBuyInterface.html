@@ -10,6 +10,7 @@
       body {
         margin: 0;
         padding: 0;
+        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,14 +19,16 @@
       #officeBuy {
         padding: 10px;
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background-color: #444;
         border: 1px solid grey;
         border-radius: 16px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
       }
       .auction-item {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        gap: 10px;
       }
 
       .auction-item img {
@@ -48,16 +51,16 @@
         margin: 5px 0;
       }
       #officeBuy button {
+        background-color: #4CAF50; /* Green */
         width: 100px;
         padding: 10px;
         border: none;
-        background-color: #007bff;
         color: #fff;
         border-radius: 5px;
         cursor: pointer;
       }
       #officeBuy button[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: #45a049; /* Darker green on hover */
       }
     </style>
   </head>

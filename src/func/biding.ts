@@ -13,9 +13,9 @@ const updateBid = (newBid: number) => {
       { scope: "local", author: WA.player.state.master ?? "System" }
     );
     const duration = 3000;
-    WA.player.setOutlineColor(255, 255, 0);
+    WA.player.setOutlineColor(255, 255, 30);
     setTimeout(() => {
-      WA.player.setOutlineColor(0, 0, 0);
+      WA.player.removeOutlineColor();
     }, duration);
   } else {
     WA.chat.sendChatMessage("Une offre plus élevée existe déjà.", {
@@ -52,28 +52,29 @@ const fillProductDetails = () => {
       parseFloat(WA.state.productNewPrice) || parseFloat(WA.state.productPrice);
     auctionProduct.innerHTML = `
       <div class="auction-item">
-      <img src="${WA.state.productImage}" alt="Product Image" />
-      <div class="auction-details">
-        <p class="product-name">${WA.state.productName}</p>
-        <p class="starting-price">Starting Price: $${WA.state.productPrice}</p>
-      </div>
-      <div class="auction-details">
-        <p class="current-price">Current Price: $${currentPrice.toFixed(2)}</p>
-        <p class="time-left">Time Left: 1 day</p>
-      </div>
-      </div>
-      <div class="auction-form">
-      <form method="post" id="bid-form">
-        <label for="bid">Your Bid:</label>
-        <input
-          type="text"
-          id="bid"
-          name="bid"
-          placeholder="Enter your bid amount"
-        />
-        <input id="bidSubmit" type="submit" value="Place Bid" />
-      </form>
+    <img src="${WA.state.productImage}" alt="Image du produit" />
+    <div class="auction-details">
+      <p class="product-name">${WA.state.productName}</p>
+      <p class="starting-price">Prix de départ : ${WA.state.productPrice}€</p>
     </div>
+    <div class="auction-details">
+      <p class="current-price">Prix actuel : ${currentPrice.toFixed(2)}€</p>
+      <p class="time-left">Temps restant : 1 jour</p>
+    </div>
+</div>
+<div class="auction-form">
+    <form method="post" id="bid-form">
+      <label for="bid">Votre enchère :</label>
+      <input
+        type="text"
+        id="bid"
+        name="bid"
+        placeholder="Entrez votre montant d'enchère"
+      />
+      <input id="bidSubmit" type="submit" value="Placer l'enchère" />
+    </form>
+</div>
+
     `;
     // Add event listener to the bid form
     const bidForm = document.querySelector("#bid-form");
@@ -92,5 +93,5 @@ const fillProductDetails = () => {
     }
   }
 };
-
+console.log('tetekl')
 export {};
