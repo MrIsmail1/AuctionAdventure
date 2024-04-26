@@ -1,6 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bidingInterface } from "./loader/bidingInterface";
-import leaderboard from "./loader/leaderboard";
+import leaderboardInterface from "./loader/leaderboardInterface";
 import { masterInterface } from "./loader/masterInterface";
 import { signInterface } from "./loader/signInterface";
 import { tutorialInterface } from "./loader/tutorialInterface";
@@ -24,7 +24,7 @@ WA.onInit()
       bidingInterface();
       tutorialInterface();
     }
-    leaderboard();
+    leaderboardInterface();
     signInterface();
     ticketOfficeInterface();
   })

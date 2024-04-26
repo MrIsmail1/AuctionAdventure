@@ -2,7 +2,6 @@ const leaderboard = async () => {
 let board: any;
 
   WA.room.onEnterLayer("leaderboard").subscribe(async () => {
-
         board = await WA.ui.website.open({
             url: "../pages/leaderboard.html",
             position: {
