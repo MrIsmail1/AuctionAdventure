@@ -22,10 +22,6 @@ const constructProductElement = () => {
         <p class="buyer-name">${WA.player.name}</p>
       </div>
     `;
-
-    const boardForm = document.getElementById("leaderboard") as HTMLTextAreaElement;
-    WA.state.leaderboard = boardForm.value;
-
   }
 
   return productDiv;
@@ -33,8 +29,10 @@ const constructProductElement = () => {
 
 WA.onInit().then(() => {
   const productElement = constructProductElement();
+  // const boardform = document.getElementById("leaderboard") as HTMLTextAreaElement;
+  // WA.state.leaderboard = boardform.value;
 
-  WA.state.leaderboard = WA.state.leaderboard + productElement.outerHTML;
+  WA.state.leaderboardValue += productElement.outerHTML;
 }).catch(e => console.error(e));
 
 export {};
