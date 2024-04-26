@@ -28,22 +28,18 @@ const fillProductDetails = (products) => {
       let price =
         parseFloat(product.price) || parseFloat(WA.state.productNewPrice);
       auctionProduct.innerHTML = `
-              <img src="${product.image}" alt="Product Image" />
-              <div class="auction-details">
-                <p class="product-name">${product.title}</p>
-                <p class="starting-price">Starting Price: $${product.price}</p>
-              </div>
-              <div class="auction-details">
-                <p class="current-price">Current Price: $${price.toFixed(2)}</p>
-                <p class="time-left">Time Left: 1 day</p>
-              </div>
-              <button class="in-auction-button" data-product-id="${
-                product.id
-              }">Auction</button>
-              <button class="sell-button" data-product-id="${
-                product.id
-              }">Sell</button>
-            `;
+            <img src="${product.image}" alt="Image du produit" />
+            <div class="auction-details">
+              <p class="product-name">${product.title}</p>
+              <p class="starting-price">Prix de départ : ${product.price}€</p>
+            </div>
+            <div class="auction-details">
+              <p class="current-price">Prix actuel : ${price.toFixed(2)}€</p>
+              <p class="time-left">Temps restant : 1 jour</p>
+            </div>
+            <button class="in-auction-button" data-product-id="${product.id}">Enchérir</button>
+            <button class="sell-button" data-product-id="${product.id}">Vendre</button>
+          `;
       auctionProductsContainer.appendChild(auctionProduct);
 
       // Add event listener to the in auction button
