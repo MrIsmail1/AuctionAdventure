@@ -1,14 +1,10 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bidingInterface } from "./loader/bidingInterface";
 import leaderboard from "./loader/leaderboard";
-import { masterInterface } from "./loader/masterInterface";
-import { signInterface } from "./loader/signInterface";
-import { tutorialInterface } from "./loader/tutorialInterface";
-import { voteInterface } from "./loader/voteInterface";
-
-import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { officeBuyInterface } from "./loader/officeBuyInterface";
+import { signInterface } from "./loader/signInterface";
 import ticketOfficeInterface from "./loader/ticketOfficeInterface";
+import { tutorialInterface } from "./loader/tutorialInterface";
 
 console.log("Script started successfully");
 
@@ -18,7 +14,6 @@ WA.onInit()
     console.log("Scripting API ready");
     if (WA.room.hashParameters.master === "true") {
       WA.player.setOutlineColor(255, 0, 0);
-      masterInterface();
       officeBuyInterface();
     } else {
       bidingInterface();
