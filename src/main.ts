@@ -12,12 +12,16 @@ console.log("Script started successfully");
 WA.onInit()
   .then(() => {
     console.log("Scripting API ready");
+    WA.state.saveVariable("showCar", false);
     if (WA.room.hashParameters.master === "true") {
       WA.player.setOutlineColor(255, 0, 0);
       officeBuyInterface();
     } else {
       bidingInterface();
       tutorialInterface();
+    }
+    if (WA.state.loadVariable("showCar")) {
+      WA.room.showLayer("Car" + WA.state.productId);
     }
     leaderboard();
     signInterface();

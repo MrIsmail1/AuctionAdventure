@@ -12,7 +12,6 @@ interface Product {
 WA.onInit()
   .then(async () => {
     const products = await WA.state.loadVariable("productList");
-    console.log(products);
     if (products) {
       fillProductDetails(products);
     }
@@ -56,6 +55,15 @@ const fillProductDetails = (products) => {
           console.log("Another product is already in auction.");
           return;
         }
+        WA.state.saveVariable("showCar", true);
+        WA.chat.sendChatMessage(
+          "Une nouvelle enchère a été lancée sur " +
+            product.title +
+            " à " +
+            product.price +
+            "€. Venez participer à la vente aux enchères !",
+          { scope: "local", author: WA.player.state.master ?? "System" }
+        );
         WA.room.showLayer("Car" + product.id);
         WA.state.productInAuction = true;
         WA.state.productId = product.id;

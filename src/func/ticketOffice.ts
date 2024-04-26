@@ -22,7 +22,7 @@ document
       };
 
       // Load existing productList or initialize it as an empty array
-      let productList = await WA.state.loadVariable("productList");
+      let productList = (await WA.state.loadVariable("productList")) as any[];
       if (!productList) {
         productList = [];
       }
@@ -31,7 +31,8 @@ document
       productList.push(product);
 
       // Save the updated productList back to the state
-      await WA.state.saveVariable("productList", productList);
+      await WA.state.saveVariable("productList", [...productList]);
+      console.log(WA.state.productList);
       await WA.state.saveVariable("lastProductId", productId);
 
       displaySuccessMessage("Produit ajouté avec succès !");

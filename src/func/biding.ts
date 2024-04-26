@@ -13,9 +13,9 @@ const updateBid = (newBid: number) => {
       { scope: "local", author: WA.player.state.master ?? "System" }
     );
     const duration = 3000;
-    WA.player.setOutlineColor(255, 255, 0);
+    WA.player.setOutlineColor(255, 255, 30);
     setTimeout(() => {
-      WA.player.setOutlineColor(0, 0, 0);
+      WA.player.removeOutlineColor();
     }, duration);
   } else {
     WA.chat.sendChatMessage("Une offre plus élevée existe déjà.", {
