@@ -17,10 +17,6 @@ const bidingInterfaceLoader = async () => {
       allowApi: true,
     });
   });
-  const bidValue = document.getElementById("bid") as HTMLTextAreaElement;
-  const bidButton = document.getElementById("bidSubmit") as HTMLButtonElement;
-
-  bidButton.addEventListener("click", () => {});
   WA.room.area.onLeave("auctionZone").subscribe(() => {
     if (bindingInterface) {
       bindingInterface.close();

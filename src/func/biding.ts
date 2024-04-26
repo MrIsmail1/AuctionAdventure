@@ -62,6 +62,18 @@ const fillProductDetails = () => {
         <p class="time-left">Time Left: 1 day</p>
       </div>
       </div>
+      <div class="auction-form">
+      <form method="post" id="bid-form">
+        <label for="bid">Your Bid:</label>
+        <input
+          type="text"
+          id="bid"
+          name="bid"
+          placeholder="Enter your bid amount"
+        />
+        <input id="bidSubmit" type="submit" value="Place Bid" />
+      </form>
+    </div>
     `;
     // Add event listener to the bid form
     const bidForm = document.querySelector("#bid-form");
