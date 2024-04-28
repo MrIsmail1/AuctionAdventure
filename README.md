@@ -1,23 +1,4 @@
-# WorkAdventure Map Starter Kit
-
-![map](./map.png)
-
-This is a starter kit to help you build your own map for [WorkAdventure](https://workadventu.re).
-
-To understand how to use this starter kit, follow the tutorial at [https://workadventu.re/map-building](https://workadventu.re/map-building).
-
-## Structure
-* *public*: Static files like PDFs or audio files
-* *src*: Scripts files
-* *tilesets*: All tilesets
-* *map.tmj*: Map file
-* *map.png*: The map thumbnail displayed on the in-game map information
-
-If you want to use more than one map file, just add the new map file on root or in a folder.
-
-we recommend using 500x500 images for the map thumbnails.
-
-If you are going to create custom websites to embed in the map, please reference the HTML files in the `input` option in *vite.config.js*.
+# AuctionAdventure
 
 ## Requirements
 
@@ -35,21 +16,44 @@ npm run dev
 ## Test production map
 
 You can test the optimized map as it will be in production:
+
 ```sh
 npm run build
 npm run prod
 ```
 
+# Functionalities
+
+- **Tutorial**: Provides an explanation of the different areas of the map and how the platform can be utilized. Developed By Stéphan GUEORGUIEFF.
+
+- **SellingOffice**: This area of the map allows users to list their items for auction. Developed by Hamza MAHMOOD and Ismail MRABET.
+
+- **Leaderboard**: Shows the leaderboard of users with the highest bids. Developed by Hamza MAHMOOD and Melvin PIERRE.
+
+- **Auction Master**: Gives the auction master the ability to manage the auction by putting products up for auction or selling a product. Developed by Melvin PIERRE and Ismail MRABET.
+
+- **Bidding Interface**: An interface that enables users to bid on items currently in auction. Developed By Ismail MRABET.
+
+# Contributors
+
+- **Hamza MAHMOOD (DEV)** - Pseudo: Zhamza1
+- **Ismail MRABET (DEV)** - Pseudo: MrIsmail1
+- **Melvin PIERRE (DEV)** - Pseudo: melvin-crypto
+- **Stéphan GUEORGUIEFF (DEV)** - Pseudo: StephanG2a
+- **Adam Thireaut (DESIGNER)** - Pseudo: Adamtht
+- **Gwenn Bounlay (MARKETING)**
+
 ## Licenses
 
 This project contains multiple licenses as follows:
 
-* [Code license](./LICENSE.code) *(all files except those for other licenses)*
-* [Map license](./LICENSE.map) *(`map.tmj` and the map visual as well)*
-* [Assets license](./LICENSE.assets) *(the files inside the `src/assets/` folder)*
+- [Code license](./LICENSE.code) _(all files except those for other licenses)_
+- [Map license](./LICENSE.map) _(`map.tmj` and the map visual as well)_
+- [Assets license](./LICENSE.assets) _(the files inside the `src/assets/` folder)_
 
 ### About third party assets
 
 If you add third party assets in your map, do not forget to:
+
 1. Credit the author and license with the "tilesetCopyright" property present in the properties of each tilesets in the `map.tmj` file
 2. Add the license text in LICENSE.assets
